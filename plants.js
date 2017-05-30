@@ -39,5 +39,50 @@ var plants = {
     maxGenerations: 4,
     translateX: 0,
     translateY: null,
+  },
+  
+  3: {
+    name: 'd',
+    axiom: 'X',
+    rules: {
+      X: 'F[+X]F[-X]+X',
+      F: 'FF'
+    },
+    theta: 20,
+    scalingFactor: 0.5,
+    initialLength: 3,
+    maxGenerations: 7,
+    translateX: 0,
+    translateY: null,
+  },
+  
+  4: {
+    name: 'e',
+    axiom: 'X',
+    rules: {
+      X: 'F[+X][-X]FX',
+      F: 'FF'
+    },
+    theta: 25.7,
+    scalingFactor: 0.5,
+    initialLength: 2.6,
+    maxGenerations: 7,
+    translateX: 0,
+    translateY: null,
+  },
+  
+  5: {
+    name: 'f',
+    axiom: 'X',
+    rules: {
+      X: 'F-[[X]+X]+F[+FX]-X',
+      F: 'FF'
+    },
+    theta: 22.5,
+    scalingFactor: 0.5,
+    initialLength: 3.7,
+    maxGenerations: 5,
+    translateX: 0,
+    translateY: null,
   }
 }
