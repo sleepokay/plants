@@ -1,14 +1,14 @@
-function LSystem(axiom, ruleset) {
-  this.sentence = plant.axiom;
-  this.ruleset = plant.ruleset;
+function LSystem(axiom, rules) {
+  this.sentence = axiom;
+  this.rules = rules;
 
   this.generate = function() {
     var nextString = [];
-    for (var i = 0; i <= this.axiom.length; i++) {
-      var character = this.axiom.charAt(i);
+    for (var i = 0; i <= this.sentence.length; i++) {
+      var character = this.sentence.charAt(i);
       if (character in this.rules) {
         nextString.push(
-          this.ruleset[character]
+          this.rules[character]
         );
       } else {
         nextString.push(character);

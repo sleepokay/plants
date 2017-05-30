@@ -1,18 +1,28 @@
 function Turtle(plant) {
-  // plant contains all the parameters: axiom, production rules,
+  // plant contains all the parameter values: axiom, production rules,
   // draw length, scaling factor, rotation, and translations
-  this.length = plant.initialLength;
-  this.theta = plant.theta
+  this.length = height / plant.initialLength;
+  this.theta = radians(plant.theta);
   this.scalingFactor = plant.scalingFactor;
   this.translateX = plant.translateX;
   this.translateY = plant.translateY;
+  this.instructions = plant.axiom;
+  this.thickness = plant.initialThickness;
   
-  this.scale = function() {
+  this.shrink = function() {
     this.length *= this.scalingFactor;
   }
   
-  this.setInstructions(instructions) {
+  this.setInstructions = function(instructions) {
     this.instructions = instructions;    
+  }
+  
+  this.translateStart = function() {
+    if (this.translateX || this.translateY) {
+      translate(width / 2 + this.translateX, height - 100 + this.translateY);
+    } else {
+      translate(width / 2, height - 100);
+    }
   }
   
   /*
@@ -25,8 +35,8 @@ function Turtle(plant) {
     ]: Restore previous location
   */
   this.render = function() {
-    for (var i = 0; i < this.axiom.length; i++) {
-      var character = this.axiom.charAt(i);
+    for (var i = 0; i < this.instructions.length; i++) {
+      var character = this.instructions.charAt(i);
       switch(character) {
         case 'F':
           line(0, 0, 0, -this.length);
