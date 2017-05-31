@@ -54,7 +54,7 @@ function reset() {
   
   background(20, 2, 10);
   
-  console.log(plant.name, "\n", plant.axiom, "\n", plant.rules,  "\n", plant.theta,  "\n", plant.maxGenerations);
+  console.log(plant.name, "\n", plant.maxGenerations);
   loop();
 }
 
@@ -68,6 +68,6 @@ function windowResized() {
   steps = 0;
   
   
-  console.log(plant.name, "\n", plant.axiom, "\n", plant.rules,  "\n", plant.theta,  "\n", plant.maxGenerations);
+  console.log(plant.name, "\n", plant.maxGenerations);
   loop();
 }
