@@ -1,5 +1,6 @@
 var lsys;
 var turtle;
+var selected = -1;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -10,7 +11,9 @@ function setup() {
   stroke(205, 220, 255, 70);
   strokeWeight(2);
 
-  selected = Math.floor(Math.random() * Object.keys(plants).length);
+  if (selected == -1)
+    selected = Math.floor(Math.random() * Object.keys(plants).length);
+  
   plant = plants[selected];
   turtle = new Turtle(plant);
   lsys = new LSystem(plant.axiom, plant.rules);
@@ -44,6 +47,8 @@ function draw() {
 }
 
 function reset() {
+  if (selected == -1)
+    Math.floor(Math.random() * Object.keys(plants).length);
   plant = plants[selected];
   turtle = new Turtle(plant);
   lsys = new LSystem(plant.axiom, plant.rules);
@@ -51,7 +56,7 @@ function reset() {
   
   background(20, 2, 10);
   
-  console.log(plant.name, "\n", plant.axiom, "\n", plant.rules,  "\n", plant.theta,  "\n", plant.maxGenerations);
+  console.log(plant.name, "\n", plant.maxGenerations);
   loop();
 }
 
@@ -65,6 +70,6 @@ function windowResized() {
   steps = 0;
   
   
-  console.log(plant.name, "\n", plant.axiom, "\n", plant.rules,  "\n", plant.theta,  "\n", plant.maxGenerations);
+  console.log(plant.name, "\n", plant.maxGenerations);
   loop();
 }

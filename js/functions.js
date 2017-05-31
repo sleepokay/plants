@@ -5,8 +5,9 @@ $( document ).ready( function() {
     $("#navbar").append('<a href="#"><li class="plants" id="' + key + '">' + name + '</li></a>');});
 
   // initialize with random plant selected
-  if (selected == undefined || selected == null)
+  if (selected == -1)
     selected = Math.floor(Math.random() * Object.keys(plants).length);
+  console.log("load: " + selected);
   $('#' + selected).addClass('selected');
 
   $('.plants').on('click', function() {
