@@ -1,6 +1,6 @@
 var lsys;
 var turtle;
-var selected = 0;
+var selected = -1;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -45,6 +45,8 @@ function draw() {
 }
 
 function reset() {
+  if (selected == -1)
+    Math.floor(Math.random() * Object.keys(plants).length);
   plant = plants[selected];
   turtle = new Turtle(plant);
   lsys = new LSystem(plant.axiom, plant.rules);
