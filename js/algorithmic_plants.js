@@ -4,11 +4,9 @@ var selected = -1;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
-  frameRate(4);
-  clear();
-  
-  background(20, 2, 10);
+  background(25, 5, 10);
   stroke(205, 220, 255, 70);
+  frameRate(4);
   strokeWeight(2);
 
   if (selected == -1)
@@ -25,7 +23,7 @@ function setup() {
 
 function draw() {
   console.log("step: " + steps);
-  background(20, 2, 10);
+  background(25, 5, 10);
   stroke(205, 220, 255, 70);
 
   if (steps >= plant.maxGenerations) {
@@ -48,8 +46,10 @@ function draw() {
 
 function reset() {
   createCanvas(window.innerWidth, window.innerHeight);
-  background(20, 2, 10);
+  background(25, 5, 10);
   strokeWeight(2);
+  frameRate(4);
+  clear();
 
   if (selected == -1)
     Math.floor(Math.random() * Object.keys(plants).length);

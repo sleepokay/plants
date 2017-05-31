@@ -58,8 +58,21 @@ var plants = {
     translateX: null,
     translateY: null,
   },
-  
   4: {
+    name: 'breezy',
+    axiom: 'X',
+    rules: {
+      X: 'FF[-[X]-X]-F[-X]-FX',
+      F: 'FF'
+    },
+    theta: 16,
+    scalingFactor: 0.5,
+    initialLength: 3.7,
+    maxGenerations: 4,
+    translateX: null,
+    translateY: null,
+  },
+  5: {
     name: 'feathery',
     axiom: 'X',
     rules: {
@@ -75,18 +88,18 @@ var plants = {
   },
 
   // by emily xie
-  5: {
+  6: {
     name: 'spidery',
     axiom: 'X',
     rules: {
-      X: '+F[--[]-[X]-X]-F[-FX]+X',
+      X: '+F[---[X]-X]-F[-FX]+X',
       F: 'FF'
     },
     theta: 20,
     scalingFactor: 0.5,
-    initialLength: 3,
+    initialLength: 3.2,
     maxGenerations: 6,
     translateX: null,
-    translateY: 50,
-  },
+    translateY: null,
+  }
 }
