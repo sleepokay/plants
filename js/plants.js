@@ -1,6 +1,8 @@
 var plants = {
+  // from algorithmic botany
+  // by Lindenmayer and Prusinkiewicz
   0: {
-    name: 'b',
+    name: 'tall grass',
     axiom: 'F',
     rules: {
       F: 'F[+F]F[-F][F]'
@@ -9,12 +11,12 @@ var plants = {
     scalingFactor: 0.5,
     initialLength: 3.2,
     maxGenerations: 4,
-    translateX: 0,
+    translateX: null,
     translateY: null,
   },
   
   1: {
-    name: 'c',
+    name: 'brush',
     axiom: 'F',
     rules: {
       F: 'FF-[-F+F+F]+[+F-F-F]'
@@ -23,12 +25,12 @@ var plants = {
     scalingFactor: 0.5,
     initialLength: 4.5,
     maxGenerations: 3,
-    translateX: 0,
+    translateX: null,
     translateY: null,
   },
   
   2: {
-    name: 'd',
+    name: 'sprig',
     axiom: 'X',
     rules: {
       X: 'F[+X]F[-X]+X',
@@ -38,12 +40,12 @@ var plants = {
     scalingFactor: 0.5,
     initialLength: 3,
     maxGenerations: 7,
-    translateX: 0,
+    translateX: null,
     translateY: null,
   },
   
   3: {
-    name: 'e',
+    name: 'symmetrical',
     axiom: 'X',
     rules: {
       X: 'F[+X][-X]FX',
@@ -53,12 +55,12 @@ var plants = {
     scalingFactor: 0.5,
     initialLength: 2.6,
     maxGenerations: 7,
-    translateX: 0,
+    translateX: null,
     translateY: null,
   },
   
   4: {
-    name: 'f',
+    name: 'feathery',
     axiom: 'X',
     rules: {
       X: 'F-[[X]+X]+F[+FX]-X',
@@ -68,7 +70,23 @@ var plants = {
     scalingFactor: 0.5,
     initialLength: 3.7,
     maxGenerations: 5,
-    translateX: 0,
+    translateX: null,
     translateY: null,
-  }
+  },
+
+  // by emily xie
+  5: {
+    name: 'spidery',
+    axiom: 'X',
+    rules: {
+      X: '+F[--[]-[X]-X]-F[-FX]+X',
+      F: 'FF'
+    },
+    theta: 20,
+    scalingFactor: 0.5,
+    initialLength: 3,
+    maxGenerations: 6,
+    translateX: null,
+    translateY: 50,
+  },
 }

@@ -15,5 +15,6 @@ function LSystem(axiom, rules) {
       }
     }
     this.sentence = nextString.toString();
+    return this.sentence;
   }
 }
