@@ -84,9 +84,9 @@ var plants = {
     },
     theta: 20,
     scalingFactor: 0.5,
-    initialLength: 3,
+    initialLength: 3.2,
     maxGenerations: 6,
     translateX: null,
-    translateY: 50,
+    translateY: null,
   },
 }
