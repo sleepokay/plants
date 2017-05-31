@@ -1,5 +1,6 @@
 var lsys;
 var turtle;
+var selected = 0;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
