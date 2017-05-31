@@ -17,27 +17,30 @@ function setup() {
   steps = 0;
   
   console.log(plant.name, "\n", plant.maxGenerations);
+
 }
 
 function draw() {
-  console.log(steps);
+  console.log("step: " + steps);
   background(20, 2, 10);
   stroke(205, 220, 255, 70);
 
-
+  if (steps >= plant.maxGenerations) {
+    noLoop();
+  }
+  else {
+    steps++;
+  }
 
   // prepare turtle and draw L-System
   push();
+  lsys.generate();
   turtle.shrink();
   turtle.prep();
-  ;
-  turtle.setInstructions(lsys.generate());
+  turtle.setInstructions(lsys.sentence);
   turtle.render();
   pop();
 
-  steps++;
-  if (steps > plant.maxGenerations)
-    noLoop();
 }
 
 function reset() {
@@ -55,7 +58,7 @@ function reset() {
 function windowResized() {
   createCanvas(window.innerWidth, window.innerHeight);
   background(20, 2, 10);
-  
+
   plant = plants[selected];
   turtle = new Turtle(plant);
   lsys = new LSystem(plant.axiom, plant.rules);

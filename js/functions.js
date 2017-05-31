@@ -5,9 +5,7 @@ $( document ).ready( function() {
     $("#navbar").append('<a href="#"><li class="plants" id="' + key + '">' + name + '</li></a>');});
 
   // initialize with random plant selected
-  selected = Math.floor(Math.random() * Object.keys(plants).length);
   $('#' + selected).addClass('selected');
-  reset();
 
   $('.plants').on('click', function() {
     noLoop();
