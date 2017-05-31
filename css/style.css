@@ -24,8 +24,8 @@ li.plants:hover {
   position: fixed;
   background-color: #14020A;
   float: left;
-  width: 200px;
-  height: 100%;
+  width: 100px;
+  height: 200px;
   padding: 40px;
 }
 @media (max-width: 767px) {
