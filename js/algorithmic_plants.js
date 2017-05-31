@@ -11,7 +11,9 @@ function setup() {
   stroke(205, 220, 255, 70);
   strokeWeight(2);
 
-  selected = Math.floor(Math.random() * Object.keys(plants).length);
+  if (selected == -1)
+    selected = Math.floor(Math.random() * Object.keys(plants).length);
+  
   plant = plants[selected];
   turtle = new Turtle(plant);
   lsys = new LSystem(plant.axiom, plant.rules);

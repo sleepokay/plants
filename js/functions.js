@@ -6,6 +6,9 @@ $( document ).ready( function() {
 
   // initialize with random plant selected
   console.log("load: " + selected);
+  if (selected == -1)
+    selected = Math.floor(Math.random() * Object.keys(plants).length);
+  console.log("load: " + selected);
   $('#' + selected).addClass('selected');
 
   $('.plants').on('click', function() {
