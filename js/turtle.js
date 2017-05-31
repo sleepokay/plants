@@ -1,7 +1,7 @@
 function Turtle(plant) {
   // plant contains all the parameter values: axiom, production rules,
   // draw length, scaling factor, rotation, and translations
-  this.length = window.height / plant.initialLength;
+  this.length = height / plant.initialLength;
   this.theta = radians(plant.theta);
   this.scalingFactor = plant.scalingFactor;
   this.translateX = plant.translateX;
