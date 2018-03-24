@@ -87,7 +87,6 @@ var plants = {
     translateY: null,
   },
 
-  // by emily xie
   6: {
     name: 'spidery',
     axiom: 'X',

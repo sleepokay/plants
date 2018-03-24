@@ -1,6 +1,4 @@
 function Turtle(plant) {
-  // plant contains all the parameter values: axiom, production rules,
-  // draw length, scaling factor, rotation, and translations
   this.length = height / plant.initialLength;
   this.theta = radians(plant.theta);
   this.scalingFactor = plant.scalingFactor;
@@ -26,13 +24,13 @@ function Turtle(plant) {
   }
   
   /*
-  Standard rule set:
-    F: Draw a line and move forward
-    G: Move forward (without drawing a line)
-    +: Rotate right
-    -: Rotate left
-    [: Save current location
-    ]: Restore previous location
+  standard rule set:
+    F: move forward while drawing a line
+    G: move forward without drawing a line
+    +: rotate right
+    -: rotate left
+    [: save current location
+    ]: restore previous location
   */
   this.render = function() {
     for (var i = 0; i < this.instructions.length; i++) {
