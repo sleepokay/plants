@@ -22,7 +22,6 @@ function setup() {
 }
 
 function draw() {
-  console.log("step: " + steps);
   background(25, 5, 10);
   stroke(205, 220, 255, 70);
 
