@@ -29,7 +29,7 @@ n=1:       A   B         the initial single A turns into AB by rule (A → AB)
           /|    \
 n=2:     A B     A       A turns AB again, B turns into A
         /| |     |\
-n=3:   A B A     A B
+n=3:   A B A     A B     etc
       /| | |\    |\ \
 n=4: A B A A B   A B A
 ```
