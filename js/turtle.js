@@ -17,9 +17,9 @@ function Turtle(plant) {
   
   this.prep = function() {
     if (this.translateX || this.translateY) {
-      translate(width / 2 + this.translateX, height - 100 + this.translateY);
+      translate(width / 2 + this.translateX, height - 50 + this.translateY);
     } else {
-      translate(width / 2, height - 100);
+      translate(width / 2, height - 50);
     }
   }
   

@@ -30,7 +30,7 @@ var plants = {
   },
   
   2: {
-    name: 'sprig',
+    name: 'parsely',
     axiom: 'X',
     rules: {
       X: 'F[+X]F[-X]+X',
@@ -59,27 +59,27 @@ var plants = {
     translateY: null,
   },
   4: {
-    name: 'breezy',
+    name: 'breeze',
     axiom: 'X',
     rules: {
-      X: 'FF[-[X]-X]-F[-X]-FX',
+      X: 'F+[-[X]-X]-F[-X]-FX',
       F: 'FF'
     },
-    theta: 16,
+    theta: -20,
     scalingFactor: 0.5,
-    initialLength: 3.7,
+    initialLength: 3.5,
     maxGenerations: 4,
     translateX: null,
     translateY: null,
   },
   5: {
-    name: 'feathery',
+    name: 'feather',
     axiom: 'X',
     rules: {
       X: 'F-[[X]+X]+F[+FX]-X',
       F: 'FF'
     },
-    theta: 22.5,
+    theta: 25,
     scalingFactor: 0.5,
     initialLength: 3.7,
     maxGenerations: 5,
@@ -88,16 +88,16 @@ var plants = {
   },
 
   6: {
-    name: 'spidery',
-    axiom: 'X',
+    name: 'fraz',
+    axiom: 'FX',
     rules: {
-      X: '+F[---[X]-X]-F[-FX]+X',
-      F: 'FF'
+      F: 'FF-[-F+F]+[+F-F]',
+      X: 'FF+[+F]+[-F]'
     },
-    theta: 20,
+    theta: 25,
     scalingFactor: 0.5,
-    initialLength: 3.2,
-    maxGenerations: 6,
+    initialLength: 4,
+    maxGenerations: 3,
     translateX: null,
     translateY: null,
   }
