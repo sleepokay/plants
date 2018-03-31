@@ -1,4 +1,4 @@
-# Algorithmic Plants
+# L-System Plants
 
 ![alt tag](media/sample.gif)
 
